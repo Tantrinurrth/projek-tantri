@@ -29,7 +29,7 @@ def generate_pdf_buffer(books, verify_url=None):
     
     styles = getSampleStyleSheet()
     title_style = ParagraphStyle('TitleStyle', parent=styles['Heading1'], fontName='Helvetica-Bold', fontSize=24, textColor=colors.HexColor('#1e293b'), spaceAfter=20)
-    story.append(Paragraph("Data Buku", title_style))
+    story.append(Paragraph("Library Digital", title_style))
     story.append(Spacer(1, 10))
     
     data = [["Judul", "Penulis", "Penerbit"]]
@@ -90,11 +90,11 @@ def generate_pdf_buffer(books, verify_url=None):
     nama_style = ParagraphStyle('Nama', fontName='Helvetica-Bold', fontSize=11, textColor=colors.HexColor('#1e293b'), alignment=2)
     
     ttd_content = [
-        Paragraph("CEO LibSigManager", jabatan_style),
+        Paragraph("CEO Library Digital", jabatan_style),
         Spacer(1, 8),
         qr_img_reportlab,
         Spacer(1, 8),
-        Paragraph("Ahmad Zamroni", nama_style)
+        Paragraph("Tantri Nur Ghofurur", nama_style)
     ]
     
     ttd_table = RTTable([
